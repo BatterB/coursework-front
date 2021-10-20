@@ -1,0 +1,128 @@
+header{
+    position: fixed;
+    display: flex;
+    background-color: rgb(243, 236, 238);
+    width:100%;
+    z-index: 1020;
+}
+
+a:any-link{
+    text-decoration: none;
+    color:black
+}
+
+.menu-links{
+    display: flex;
+    padding: 40px;
+    border: 40px;
+    list-style-type: none;
+    
+}
+.menu-link>li{
+    background-color: black;
+    
+}
+.menu-link>a{
+    padding: 40px;
+    font-size: x-large;
+    
+}
+
+.menu-links>li:hover .sub-menu{
+    display: block;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-left: 25px;
+    position: absolute;
+    box-shadow: 0 5px 12px rgb(0 0 0 / 15%);
+    background-color: rgb(243, 236, 238);
+}
+
+
+.sub-menu{
+    list-style-type: none;
+    display: none;
+}
+
+.content{
+    top: 100%;
+    width: 100%;
+    display: inline-block;
+}
+
+.welcome-screen{
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 60%;
+    left: 45%;
+    margin: -125px 0 0 -125px;
+}
+
+@keyframes pulse{ 
+    0%,100%{
+        opacity: 1;
+        top: -1px;
+    }
+    50%{
+        opacity: 0.3;
+        top: -16px;
+    }
+}
+
+.angle-down{
+    -webkit-animation: pulse 3s infinite;
+    animation: pulse 3s infinite;
+    font-size: 28px;
+    position:absolute;
+    color:rgb(0, 0, 0);
+    top: 50%;
+    transform: rotate(90deg);
+}
+
+.angle-down:before {
+    content: "\003E";
+}
+
+.scroll-down-div{
+    width: 100%;
+    margin-left: 200px;
+    top:50vh;
+    position: absolute;
+    cursor: pointer;
+}
+
+.main-page-content{
+    display: inline-block;
+    position: absolute;
+    top:110%;
+}
+
+.description-text{
+    width:30%;
+    box-shadow: 0 5px 12px rgb(0 0 0 / 20%);
+    margin-left: 15%;
+    padding: 10px;
+    display:inline-block;
+    
+}
+
+#first-content-block{
+    display:inline-block;
+    margin-left: 0;
+    top:0;
+}
+
+#firstImage{
+    vertical-align:top;
+    margin:20px;
+}
+
+#second-main-text{
+    width:30%;
+    box-shadow: 0 5px 12px rgb(0 0 0 / 20%);
+    margin-left: 15px;
+    padding: 10px;
+    display:inline-block;
+}
