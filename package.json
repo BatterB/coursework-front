@@ -4,8 +4,22 @@
   "description": "coursework",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack --mode deelopment",
+    "dev:watch": "webpack --mode deelopment --watch",
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development --open"
   },
   "author": "BatterB",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "css-loader": "^6.4.0",
+    "css-minimizer-webpack-plugin": "^3.1.1",
+    "mini-css-extract-plugin": "^2.4.3",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.59.1"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^5.4.0",
+    "webpack-cli": "^4.9.1"
+  }
 }

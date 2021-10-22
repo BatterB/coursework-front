@@ -126,3 +126,12 @@ a:any-link{
     padding: 10px;
     display:inline-block;
 }
+
+.hide{
+    display:none
+   }
+
+#hstr{
+    position: absolute;
+    margin-top: 11%;
+}
