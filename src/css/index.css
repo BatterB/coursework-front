@@ -20,6 +20,7 @@ header{
     background-color: rgb(243, 236, 238);
     width:100vw;
     z-index: 2;
+    flex-wrap: wrap; 
 }
 
 a:any-link{
@@ -177,13 +178,22 @@ a:any-link{
     width: 100vw;
     margin-left: -17px;
 }
+
+.menu-icon{
+    display: none;
+}
+
 @media (max-width:425px) {
     .welcome-screen{
-        left:5vw
+        left:11vw
+    }
+
+    .menu{
+        display: none;
     }
     .menu-links{
         flex-direction: column;  
-        padding: 0;
+        padding: 20vw;
     }
 
     .menu-link>a{
@@ -193,18 +203,31 @@ a:any-link{
         width: 100vw;
     }
 
+    .main-page-content{
+        margin-left: 0;
+    }
+
     .description-text{
         width: 100vw;
         padding: 0;
         margin: 0;
     }
 
+    .menu-links>li:hover .sub-menu{
+        width: 40vw;
+        position: relative;
+        box-shadow: 0 0 0;
+        background-color: rgb(221, 216, 217);
+    }
     #firstImage{
     
         margin: 0;
         width: 100vw;
     }
 
+    .menu-link{
+        margin-bottom: 5vh;
+    }
     #second-main-text{
         width: 100vw;
         margin: 0;
@@ -216,5 +239,225 @@ a:any-link{
         margin: 0;
     }
 
+    .line{
+        display: block;
+    }
+
+    .menu-icon{
+        display: block;
+        margin-top:50px;
+        margin-left: 60vw;
+    }
     
+}
+
+.line {
+    height:10px;
+    width:30px;
+    border-top:3px solid #000000;
+}
+
+.show-menu{
+    display: block;
+    z-index: 2;
+    background-color: rgb(243, 236, 238);
+    width: 100%;
+    height: 100vh;
+   
+}
+
+.crossButton::after {
+    position: absolute;
+    top: 10px;
+    bottom: 0;
+    left: 0;
+    right: 35px;
+    content: "\274c"; 
+    font-size: 25px; 
+    color: #FFF;
+    line-height: 100px;
+    text-align: right;
+}
+
+#history-text{
+    margin-left:5vw;
+    padding: 5px;
+    width: 50vw;
+    max-height: auto;
+    box-shadow: 0 5px 12px rgb(0 0 0 / 20%);
+}
+
+.history-content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.slaider-item>img{
+    width: 35vw;
+    height: 35vw;
+}
+
+.show-slaid{
+    display: block;
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+#slaider{
+    margin-left: 5vw;
+    margin-top: 3vh;
+}
+
+
+@keyframes slidein {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 100%;
+    }
+  }
+
+
+  @media (max-width:425px) {
+    #history-text{
+        margin-left:5vw;
+        padding: 5px;
+        width: 90vw;
+        box-shadow: 0 5px 12px rgb(0 0 0 / 20%);
+    }
+    #hstr{
+        margin-top: 17vh;
+    }
+
+    .slaider-item>img{
+        width: 95vw;
+        height: 95vw;
+    }
+
+    #slaider{
+        margin-left: 2.5vw;
+        margin-top: 5vh;
+    }
+  }
+
+#Arc{
+    margin-top: 20vh;
+    position: absolute;
+}
+
+.text-arc{
+    width: 50vw;
+    margin-left: 15vw;
+    text-align: justify;
+    box-shadow: 0 5px 12px rgb(0 0 0 / 20%);
+    padding: 10vw;
+}
+
+.text-arc>p{
+    margin-bottom: 20px;
+}
+
+#img-cpu{
+    margin-left: 15vw;
+    width: 70vw;
+}
+
+#x86{
+    margin-top: 20vh;
+    position: absolute;
+}
+
+.text-x86{
+    width: 50vw;
+    margin-left: 15vw;
+    text-align: justify;
+    box-shadow: 0 5px 12px rgb(0 0 0 / 20%);
+    padding: 10vw;
+}
+
+.text-x86>p{
+    margin-bottom: 30px;
+}
+#AMD{
+    margin-top: 20vh;
+    position: absolute;
+}
+#AMD-text{
+    width: 50vw;
+    margin-left: 15vw;
+    text-align: justify;
+    box-shadow: 0 5px 12px rgb(0 0 0 / 20%);
+    padding: 10vw;
+}
+
+.img-block>img:hover{
+    animation-name: nonVisible;
+    animation-duration: 1s;
+    opacity: 0;
+}
+
+@keyframes nonVisible {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+.img-block{
+    width: 500px;
+    height: 260px;
+    margin-left: 10vw;
+    padding: 20px;
+    margin-bottom: 50px;
+    box-shadow: 0 5px 20px rgb(0 0 0 / 50%);
+    border-radius: 5px;
+}
+.img-block>img{
+    width: 540px;
+    height: 300px;
+    margin-left: -20px;
+    margin-top: -20px;
+    position: absolute;
+    border-radius: 5px;
+}
+
+.AMD-content{
+    margin-top: 20vh;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#Intel{
+    margin-top: 20vh;
+    position: absolute;
+}
+
+#Intel-text{
+    width: 50vw;
+    margin-left: 15vw;
+    text-align: justify;
+    box-shadow: 0 5px 12px rgb(0 0 0 / 20%);
+    padding: 10vw;
+}
+
+#Intel-text>img{
+    width: 50vw;
+}
+
+#Intel-text>p{
+    margin-bottom: 30px;
+}
+
+.Intel-content{
+    margin-top: 20vh;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
