@@ -246,7 +246,7 @@ a:any-link{
     .menu-icon{
         display: block;
         margin-top:50px;
-        margin-left: 60vw;
+        margin-left: 50vw;
     }
     
 }
@@ -460,4 +460,37 @@ a:any-link{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+@media (max-width:425px) {
+    #Intel-text{
+        font-size: 3vw;
+    }
+    .img-block>img{
+        width: 100vw;
+        height: 300px;
+        margin-left: -20px;
+        margin-top: -20px;
+        position: absolute;
+        border-radius: 5px;
+    }
+
+    .img-block{
+        width: 85vw;
+        height: 260px;
+        font-size: 3vw;
+        margin-left: 0;
+        padding-bottom: 20px;
+        margin-bottom: 50px;
+        box-shadow: 0 5px 20px rgb(0 0 0 / 50%);
+        border-radius: 5px;
+    }
+
+    .text-x86>img{
+        width: 50vw;
+    }
+    .text-x86{
+        width: 80vw;
+        margin-left: 0vw;
+    }
 }
